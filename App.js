@@ -1,7 +1,7 @@
 import React from 'react';
-import { View } from 'react-native';
-import Teste from './src/Teste';
+
+import Routes from './src/routes';
 
 export default function App() {
-  return <Teste />;
+  return <Routes />;
 }
