@@ -1,5 +1,5 @@
 import React from 'react';
-import { YellowBox } from 'react-native';
+import { StatusBar, YellowBox } from 'react-native';
 
 import Routes from './src/routes';
 
@@ -8,5 +8,10 @@ YellowBox.ignoreWarnings([
 ]);
 
 export default function App() {
-  return <Routes />;
+  return (
+    <>
+      <StatusBar barStyle="light-content" backgroundColor="#7159c1" />
+      <Routes />
+    </>
+  );
 }
