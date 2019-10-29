@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^10.0.6",
+    "@react-native-community/async-storage": "^1.6.2",
+    "axios": "^0.19.0",
     "expo": "^35.0.0",
     "expo-linear-gradient": "~7.0.0",
     "expo-vector-icons": "^10.0.1",
+    "immer": "^4.0.2",
     "prop-types": "^15.7.2",
     "react": "16.8.3",
     "react-dom": "16.8.3",
@@ -27,6 +30,7 @@
     "reactotron-redux": "^3.1.2",
     "reactotron-redux-saga": "^4.2.2",
     "redux": "^4.0.4",
+    "redux-persist": "^6.0.0",
     "redux-saga": "^1.1.1",
     "styled-components": "^4.4.0"
   },
