@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { Image } from 'react-native';
+import { Image, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 
 import logo from '../../assets/logo.png';
@@ -31,42 +31,44 @@ export default function SignIn({ navigation }) {
 
   return (
     <Background>
-      <Container>
-        <Image source={logo} />
+      <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+        <Container>
+          <Image source={logo} />
 
-        <Form>
-          <FormInput
-            icon="mail-outline"
-            keyboardType="email-address"
-            autoCorrect={false}
-            autoCapitalize="none"
-            placeholder="Digite seu e-mail"
-            returnKeyType="next"
-            onSubmitEditing={() => passwordRef.current.focus()}
-            value={email}
-            onChangeText={setEmail}
-          />
+          <Form>
+            <FormInput
+              icon="mail-outline"
+              keyboardType="email-address"
+              autoCorrect={false}
+              autoCapitalize="none"
+              placeholder="Digite seu e-mail"
+              returnKeyType="next"
+              onSubmitEditing={() => passwordRef.current.focus()}
+              value={email}
+              onChangeText={setEmail}
+            />
 
-          <FormInput
-            icon="lock-outline"
-            secureTextEntry
-            placeholder="Sua senha secreta"
-            ref={passwordRef}
-            returnKeyType="send"
-            onSubmitEditing={handleSubmit}
-            value={password}
-            onChangeText={setPassword}
-          />
+            <FormInput
+              icon="lock-outline"
+              secureTextEntry
+              placeholder="Sua senha secreta"
+              ref={passwordRef}
+              returnKeyType="send"
+              onSubmitEditing={handleSubmit}
+              value={password}
+              onChangeText={setPassword}
+            />
 
-          <SubmitButton loading={loading} onPress={handleSubmit}>
-            Acessar
-          </SubmitButton>
-        </Form>
+            <SubmitButton loading={loading} onPress={handleSubmit}>
+              Acessar
+            </SubmitButton>
+          </Form>
 
-        <SignLink onPress={() => navigation.navigate('SignUp')}>
-          <SignLinkText>Criar conta gratuita</SignLinkText>
-        </SignLink>
-      </Container>
+          <SignLink onPress={() => navigation.navigate('SignUp')}>
+            <SignLinkText>Criar conta gratuita</SignLinkText>
+          </SignLink>
+        </Container>
+      </TouchableWithoutFeedback>
     </Background>
   );
 }
