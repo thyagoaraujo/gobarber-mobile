@@ -40,4 +40,5 @@ export const Time = styled.Text`
   color: #999;
   font-size: 13px;
   margin-top: 4px;
+  width: 150px;
 `;
