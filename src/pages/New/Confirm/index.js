@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import { formatRelative, parseISO } from 'date-fns';
-import pt from 'date-fns/locale/pt';
+import pt from 'date-fns/locale';
 import { TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
