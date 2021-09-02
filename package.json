@@ -16,7 +16,7 @@
     "expo": "^35.0.0",
     "expo-linear-gradient": "~7.0.0",
     "expo-vector-icons": "^10.0.1",
-    "immer": "^4.0.2",
+    "immer": "^9.0.6",
     "prop-types": "^15.7.2",
     "react": "16.8.3",
     "react-dom": "16.8.3",
